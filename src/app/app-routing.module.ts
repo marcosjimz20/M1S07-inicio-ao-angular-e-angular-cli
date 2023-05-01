@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContatoComponent } from './contato/contato.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -13,6 +14,10 @@ const routes: Routes = [
       import('./listagem-produto/listagem-produto.module').then(
         (m) => m.ListagemProdutoModule
       ),
+  },
+  {
+    path: 'contato',
+    component: ContatoComponent,
   },
   { path: '**', redirectTo: 'home' },
 ];
